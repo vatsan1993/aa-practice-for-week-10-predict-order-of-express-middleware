@@ -15,12 +15,16 @@ app.use((req, res, next) => {
 });
 
 // Third
-app.get('/other-resource', (req, res, next) => {
-  console.log('Third');
-  next();
-}, (req, res, next) => {
-  res.send('Message');
-});
+app.get(
+  '/other-resource',
+  (req, res, next) => {
+    console.log('Third');
+    next();
+  },
+  (req, res, next) => {
+    res.send('Message');
+  }
+);
 
 // Fourth
 const fourth = (req, res, next) => {

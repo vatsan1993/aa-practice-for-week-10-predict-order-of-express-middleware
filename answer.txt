@@ -1,0 +1,20 @@
+# all middlewares will from top to bottom unless there is an error or a route does not match
+if there is an error the middleware jumps to first error that is found.
+if the route does not match, then next middleware will run or the next route will be checked.
+Route: GET /
+
+First
+Fifth
+seventh
+
+/other-resource
+First
+Fifth
+Sixth
+seventh
+
+
+GET /not-found
+First
+Fifth
+Seventh
